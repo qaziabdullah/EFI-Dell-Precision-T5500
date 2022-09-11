@@ -4,7 +4,7 @@
 
 ### This repo contains all the fixes for Dell T5500 with Kepler Card and Xeon X5675 on macOS Monterey.
 
-The EFI folder can also be used on older versions of macOS [tested on BigSur and Catalina]. However, the main support of this branch is based on Monterey. 
+The EFI folder can also be used on older versions of macOS [tested on Big Sur and Catalina]. However, the main support of this branch is based on Monterey. 
 
 
 Tested on:
@@ -24,7 +24,7 @@ Almost everything.
 
 ## What doesn’t work?
 
-1. Sleep is broken due to CPUSTSCSYNC not supported on Monterey. However, it works in Bigger.
+1. Sleep is broken due to CPUSTSCSYNC not supported on Monterey. However, it works in Big Sur.
 2. USB 1,1. Blame Apple for that.
 3. Wired memory on my system stays at 10GB, dunno if that’s an issue but here we have it.
 4. Disabled CPUPM, since X5675 doesn’t have any PM SSDT or I was unable to get it working but enabling CPUPM results in low freq and cpu doesn’t go at turbo freq.
