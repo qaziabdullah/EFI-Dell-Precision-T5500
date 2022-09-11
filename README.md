@@ -51,7 +51,7 @@ Ignore this entire section if you have > Kepler card or AMD OOTB supported card.
 
 ## RTC
 
-This will cause BIOS to reset after every shutdown. B*tc* took long to get fixed. With Bios A17, the RTC fixes are added in config.plist.
+This will cause BIOS to reset after every shutdown. B*tch took long to get fixed. With Bios A17, the RTC fixes are added in config.plist.
 However, with a different version of BIOS, the sectors might differ. Either Upgrade/Downgrade to A17 or find bad sectors if bios resets.
 
 
