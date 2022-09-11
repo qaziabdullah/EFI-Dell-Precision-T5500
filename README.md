@@ -70,6 +70,10 @@ There are two ways you can install Monterey:
 
 After you have created a bootable Installer, copy the EFI folder to the EFI partition and install as usual. After the installation, mount the EFI partition of the installed OS and copy the EFI folder to its partition.
 
+### NVIDIA OPTIONAL
+When you boot on a kepler card, you will notice no acceleration will be there. 
+Complete setup, copy efi, and use OCLP.
+
 ## Screenshot
 
 ![About this Mac](https://i.postimg.cc/28MmT8bd/9a1df918-2e6f-4e81-b82f-89b32046d098-copy.jpg)
