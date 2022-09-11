@@ -17,6 +17,9 @@ RAM | 32GB DDR3 1600Mhz
 Storage | Liteonit LC-128M6S
 Ethernet | Broadcom 5761 Gigabit Ethernet (GbE) PCI-Express 
 Software | macOS 12.5.1 Monterey
+BIOS | A17
+Serial Port | Disabled
+SATA Operation | AHCI
 
 ## What works?
 
