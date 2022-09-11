@@ -72,7 +72,7 @@ After you have created a bootable Installer, copy the EFI folder to the EFI part
 
 ## Screenshot
 
-![About this Mac](https://user-images.githubusercontent.com/28839925/137376042-5502b29d-ef16-4ff2-8c92-8998c46662e1.png)
+![About this Mac](https://i.postimg.cc/28MmT8bd/9a1df918-2e6f-4e81-b82f-89b32046d098-copy.jpg)
 
 
 ## Credits
