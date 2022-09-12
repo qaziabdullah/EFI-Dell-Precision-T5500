@@ -3,6 +3,7 @@
 [![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.4-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
 
 ### This repo contains all the fixes for Dell T5500 with Kepler Card and Xeon X5675 on macOS Monterey.
+#### This should also work on T3500 system but I haven't tested them. Try and let us know.
 
 The EFI folder can also be used on older versions of macOS [tested on Big Sur and Catalina]. However, the main support of this branch is based on Monterey. 
 
