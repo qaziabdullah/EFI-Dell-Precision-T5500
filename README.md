@@ -48,7 +48,7 @@ To get Kepler working on Monterey, you have to use shikigva=40 and agdpmod=9696.
 Those are added in the config.plist.
 Otherwise, expect a black display on boot. 
 Use OCLP for acceleration as Monterey removed support for Kepler cards.
-Ignore this entire section if you have > Kepler card or AMD OOTB supported card.
+Ignore this entire section if you have AMD OOTB supported card.
 
 Here is [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/)
 ###### INCASE YOU DON'T HAVE KEPLER CARD AND HAVE AN AMD ONE, REMOVE THOSE BOOT-ARGS
