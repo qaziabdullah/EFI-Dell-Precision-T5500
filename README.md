@@ -1,7 +1,7 @@
 # Dell Precision T5500 Hackintosh
 
 [![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.4-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
-[![GitHub issues](https://img.shields.io/github/issues/SkyrilHD/Dell-Exx50-Hackintosh.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/issues/)
+[![GitHub issues](https://img.shields.io/github/issues/qaziabdullah/EFI-Dell-Precision-T5500.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/issues/)
 
 ### This repo contains all the fixes for Dell T5500 with Kepler Card and Xeon X5675 on macOS Monterey.
 #### This should also work on T3500 system but I haven't tested them. Try and let us know.
