@@ -99,4 +99,4 @@ Thanks to:
 - [Me](http://ididnothing.com/).
 
 
-All this was written on an T5500 with Monterey installed and after kanging [SkyrilHD’s](https://github.com/SkyrilHD/) readme.
+All this was written on a T5500 with Monterey installed and after kanging [SkyrilHD’s](https://github.com/SkyrilHD/) readme.
