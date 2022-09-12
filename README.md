@@ -78,6 +78,11 @@ After you have created a bootable Installer, copy the EFI folder to the EFI part
 When you boot on a kepler card, you will notice no acceleration will be there. 
 Complete setup, copy efi, and use OCLP.
 
+### POST INSTALL
+
+You can remove -v from boot-args. It works without verbose. Tested it.
+
+
 ## Screenshot
 
 ![About this Mac](https://i.postimg.cc/28MmT8bd/9a1df918-2e6f-4e81-b82f-89b32046d098-copy.jpg)
