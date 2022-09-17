@@ -35,8 +35,6 @@ Almost everything.
 4. Disabled CPUPM, since X5675 doesn’t have any PM SSDT or I was unable to get it working but enabling CPUPM results in low freq and cpu doesn’t go at turbo freq.
 5. Shutdown works, reboot doesn’t. Which might get solved.
 6. Haven’t really tested anything other than that which didn’t work so everything works.
-7. Could be different for someone else, backup restore doesn’t work for me using time machine.
-8. Update from Big Sur doesn’t work either.
 
 ## How To Use
 
