@@ -30,11 +30,9 @@ Almost everything.
 ## What doesn’t work?
 
 1. Sleep is broken due to CPUSTSCSYNC not supported on Monterey. However, it works in Big Sur.
-2. USB 1,1. Blame Apple for that.
-3. Wired memory on my system stays at 10GB, dunno if that’s an issue but here we have it.
-4. Disabled CPUPM, since X5675 doesn’t have any PM SSDT or I was unable to get it working but enabling CPUPM results in low freq and cpu doesn’t go at turbo freq.
-5. Shutdown works, reboot doesn’t. Which might get solved.
-6. Haven’t really tested anything other than that which didn’t work so everything works.
+2. Disabled CPUPM, since X5675 doesn’t have any PM SSDT or I was unable to get it working but enabling CPUPM results in low freq and cpu doesn’t go at turbo freq.
+3. Shutdown works, reboot doesn’t. Which might get solved.
+4. Haven’t really tested anything other than that which didn’t work so everything works.
 
 ## How To Use
 
@@ -61,6 +59,11 @@ However, with a different version of BIOS, the sectors might differ. Either Upgr
 
 It’s just required for sleep atm. Everything else isn’t affected because of this.
 Wait for a newer version, possibly 1.10.0 as current version won’t let you boot.
+
+## Bluetooth
+
+The default SMBIOS is MacPro5,1. BluetoolFixup kexts and brcmpatchram things won't work. Change to iMac14,2. 
+Tested and working. Will upload new EFI.
 
 ## How to Install macOS Monterey
 
