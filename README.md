@@ -18,10 +18,11 @@ GPU | Nvidia Quadro 410 GK107 [Kepler]
 RAM | 32GB DDR3 1600Mhz
 Storage | Liteonit LC-128M6S
 Ethernet | Broadcom 5761 Gigabit Ethernet (GbE) PCI-Express 
-Software | macOS 12.5.1 Monterey
+Software | macOS 12.6 Monterey
 BIOS | A17
 Serial Port | Disabled
 SATA Operation | AHCI
+Bluetooth | Orico BCM20702 - CSR8510 didn't work
 
 ## What works?
 
@@ -29,10 +30,9 @@ Almost everything.
 
 ## What doesn’t work?
 
-1. Sleep is broken due to CPUSTSCSYNC not supported on Monterey. However, it works in Big Sur.
+1. Sleep is broken due to CPUSTSCSYNC not supported on Monterey. However, it works in Big Sur. (Due to my work i don't let it sleep anyway so you can find fix and let me know)
 2. Disabled CPUPM, since X5675 doesn’t have any PM SSDT or I was unable to get it working but enabling CPUPM results in low freq and cpu doesn’t go at turbo freq.
 3. Shutdown works, reboot doesn’t. Which might get solved.
-4. Haven’t really tested anything other than that which didn’t work so everything works.
 
 ## How To Use
 
