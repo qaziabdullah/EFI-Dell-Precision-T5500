@@ -14,9 +14,9 @@ Tested on:
 Model | Precision T5500
 ------------- | ---------------
 CPU | Intel Xeon 5675
-GPU | Nvidia Quadro 410 GK107 [Kepler]
+GPU | AMD Radeon RX 570 4GB (Sapphire) 
 RAM | 32GB DDR3 1600Mhz
-Storage | Liteonit LC-128M6S
+Storage | Samsung EVO 870 1TB
 Ethernet | Broadcom 5761 Gigabit Ethernet (GbE) PCI-Express 
 Software | macOS 12.6 Monterey
 BIOS | A17
@@ -38,7 +38,7 @@ Almost everything.
 
 Copy the EFI folder to your EFI partition. That's it.
 
-## Kepler Card
+## Kepler Card (UPGRADED TO RX570)
 
 To get Kepler working on Monterey, you have to use shikigva=40 and agdpmod=9696.
 Those are added in the config.plist.
@@ -63,7 +63,6 @@ Wait for a newer version, possibly 1.10.0 as current version won’t let you boo
 ## Bluetooth
 
 The default SMBIOS is MacPro5,1. BluetoolFixup kexts and brcmpatchram things won't work. Change to iMac14,2. 
-Tested and working. Will upload new EFI.
 
 ## How to Install macOS Monterey
 
