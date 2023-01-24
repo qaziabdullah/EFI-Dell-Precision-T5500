@@ -1,6 +1,6 @@
 # Dell Precision T5500 Hackintosh
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.4-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.8-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
 [![GitHub issues](https://img.shields.io/github/issues/qaziabdullah/EFI-Dell-Precision-T5500.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/issues/)
 
 ### This repo contains all the fixes for Dell T5500 with Rx570 and Dual Xeon X5675 on macOS Monterey.
