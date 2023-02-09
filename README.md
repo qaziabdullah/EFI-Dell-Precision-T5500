@@ -69,7 +69,7 @@ Sleep is kinda working fine for me. See if you have issues and let me know.
 
 ## Bluetooth
 
-The default SMBIOS is MacPro1,1.
+The default SMBIOS is iMacPro1,1.
 Everything works so no need to change this ig.
 Test Bluetooth on Ventura.
 
