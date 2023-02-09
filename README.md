@@ -140,7 +140,7 @@ After you have created a bootable Installer, copy the EFI folder to the EFI part
 
 ## How to Install macOS Ventura
 
-There are two ways you can install Monterey:
+There are two ways you can install Ventura:
 
 1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
 
