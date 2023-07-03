@@ -55,6 +55,19 @@ RX570 is supported on Ventura after patching with OCLP. Use 03080000 sip to boot
 Didn't test much.
 USB is broken completely, OCLP will fix that too.
 
+## Sonoma Beta
+
+RX570 is supported on Sonoma after patching with OCLP.
+Works fine after OLCP. Bluetooth might have issues. Will update once I fix it or have any update.
+USB is broken completely, OCLP will fix that too.
+
+## Note For Ventura & Sonoma
+
+Install with sip disabled. 
+It won't boot. Boot to Ventura or Sonoma's recovery and open terminal.
+Type csrutil disbale. Hit enter. 
+Reboot to the OS with sip disabled or sip configured to OCLP's requirements.
+
 ## RTC
 
 This will cause BIOS to reset after every shutdown. B*tch took long to get fixed. With Bios A17, the RTC fixes are added in config.plist.
