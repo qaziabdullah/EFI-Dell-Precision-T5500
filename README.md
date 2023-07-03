@@ -70,7 +70,7 @@ Reboot to the OS with sip disabled or sip configured to OCLP's requirements.
 
 ## RTC
 
-This will cause BIOS to reset after every shutdown. B*tch took long to get fixed. With Bios A17, the RTC fixes are added in config.plist.
+This will cause BIOS to reset after every shutdown. B*tch took long to get fixed. With Bios A16, the RTC fixes are added in config.plist.
 However, with a different version of BIOS, the sectors might differ. Either Upgrade/Downgrade to A16 or find bad sectors if bios resets.
 
 
