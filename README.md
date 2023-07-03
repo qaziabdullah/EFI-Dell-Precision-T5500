@@ -1,6 +1,6 @@
 # Dell Precision T5500 Hackintosh
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.8-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.3-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
 [![GitHub issues](https://img.shields.io/github/issues/qaziabdullah/EFI-Dell-Precision-T5500.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/issues/)
 
 ### This repo contains all the fixes for Dell T5500 with Rx570 and Dual Xeon X5675 on macOS Monterey.
@@ -13,17 +13,17 @@ Tested on:
 
 Model | Precision T5500
 ------------- | ---------------
-CPU | Intel Xeon 5675 x2
+CPU | Intel Xeon X5675 x2
 GPU | AMD Radeon RX 570 4GB (Sapphire) 
 RAM | 32GB DDR3 1600Mhz
-Storage | Samsung EVO 870 1TB
+Storage | Samsung 870 EVO 1TB
 Ethernet | Broadcom 5761 Gigabit Ethernet (GbE) PCI-Express 
 Software | macOS 12.6 Monterey, Ventura & Bigsur
 BIOS | A16
 Serial Port | Disabled
-Hyperthreading | Disabled (If you are on 1x Xeon, enable HT. If you are on 2x Xeon, disable it otherwise it won't even boot)
+Hyperthreading | Disabled (Enable on single CPU, disable on dual CPU config, more [here](#hyperthreading))
 SATA Operation | AHCI
-Bluetooth | Orico BCM20702 - CSR8510 didn't work
+Bluetooth | Orico BCM20702 USB dongle
 
 ## What works?
 
