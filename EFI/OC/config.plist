@@ -660,6 +660,8 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>Strategy</key>
+				<string>Disable</string>
 			</dict>
 		</array>
 		<key>Emulate</key>
@@ -710,10 +712,14 @@
 			<false/>
 			<key>AppleXcpmForceBoost</key>
 			<false/>
+			<key>CustomPciSerialDevice</key>
+			<false/>
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableIoMapperMapping</key>
+			<false/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
@@ -721,6 +727,8 @@
 			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceAquantiaEthernet</key>
 			<false/>
 			<key>ForceSecureBootScheme</key>
 			<false/>
@@ -765,6 +773,8 @@
 			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
+			<key>HibernateSkipsPicker</key>
+			<false/>
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>LauncherOption</key>
@@ -776,7 +786,7 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>PickerVariant</key>
 			<string>Auto</string>
 			<key>PollAppleHotKeys</key>
@@ -800,8 +810,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
-			<key>SerialInit</key>
-			<false/>
+			<key>LogModules</key>
+			<string>*</string>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
@@ -830,11 +840,7 @@
 		</array>
 		<key>Security</key>
 		<dict>
-			<key>AllowNvramReset</key>
-			<true/>
 			<key>AllowSetDefault</key>
-			<true/>
-			<key>AllowToggleSip</key>
 			<false/>
 			<key>ApECID</key>
 			<integer>0</integer>
@@ -861,6 +867,13 @@
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
+		<key>Serial</key>
+		<dict>
+			<key>Init</key>
+			<false/>
+			<key>Override</key>
+			<false/>
+		</dict>
 		<key>Tools</key>
 		<array>
 			<dict>
@@ -874,6 +887,8 @@
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
 				<key>Name</key>
 				<string>OpenShell.efi</string>
 				<key>Path</key>
@@ -908,7 +923,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100</string>
+				<string>-v keepsyms=1 debug=0x100 unfairgva=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>run-efi-updater</key>
@@ -932,8 +947,6 @@
 				<string>csr-active-config</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<true/>
 		<key>LegacySchema</key>
@@ -1036,6 +1049,12 @@
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerDwellClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellDoubleClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellRadius</key>
+			<integer>0</integer>
 			<key>PointerPollMask</key>
 			<integer>-1</integer>
 			<key>PointerPollMax</key>
@@ -1083,6 +1102,8 @@
 				<string>AudioDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>AudioDxe.efi</string>
 			</dict>
@@ -1093,6 +1114,8 @@
 				<string>BiosVideo.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>BiosVideo.efi</string>
 			</dict>
@@ -1103,6 +1126,8 @@
 				<string>HiiDatabase.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HiiDatabase.efi</string>
 			</dict>
@@ -1113,6 +1138,8 @@
 				<string>OpenCanopy.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
 			</dict>
@@ -1123,6 +1150,8 @@
 				<string>OpenLinuxBoot.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenLinuxBoot.efi</string>
 			</dict>
@@ -1133,6 +1162,8 @@
 				<string>OpenVariableRuntimeDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<true/>
 				<key>Path</key>
 				<string>OpenVariableRuntimeDxe.efi</string>
 			</dict>
@@ -1143,6 +1174,8 @@
 				<string>OpenRuntime.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<true/>
 				<key>Path</key>
 				<string>OpenRuntime.efi</string>
 			</dict>
@@ -1153,6 +1186,8 @@
 				<string>OpenUsbKbDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenUsbKbDxe.efi</string>
 			</dict>
@@ -1163,6 +1198,8 @@
 				<string>ResetNvramEntry.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>ResetNvramEntry.efi</string>
 			</dict>
@@ -1173,6 +1210,8 @@
 				<string>ToggleSipEntry.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>ToggleSipEntry.efi</string>
 			</dict>
@@ -1183,6 +1222,8 @@
 				<string>XhciDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>XhciDxe.efi</string>
 			</dict>
@@ -1193,6 +1234,8 @@
 				<string>HfsPlusLegacy.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HfsPlusLegacy.efi</string>
 			</dict>
@@ -1220,16 +1263,22 @@
 		<dict>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
+			<key>ConsoleFont</key>
+			<string></string>
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>ForceResolution</key>
 			<false/>
+			<key>GopBurstMode</key>
+			<false/>
 			<key>GopPassThrough</key>
 			<string>Disabled</string>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
+			<key>InitialMode</key>
+			<string>Auto</string>
 			<key>ProvideConsoleGop</key>
 			<true/>
 			<key>ReconnectGraphicsOnConnect</key>
@@ -1285,6 +1334,8 @@
 			<false/>
 			<key>OSInfo</key>
 			<false/>
+			<key>PciIo</key>
+			<false/>
 			<key>UnicodeCollation</key>
 			<false/>
 		</dict>
@@ -1314,6 +1365,8 @@
 			<true/>
 			<key>ResizeGpuBars</key>
 			<integer>-1</integer>
+			<key>ResizeUsePciRbIo</key>
+			<false/>
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>
