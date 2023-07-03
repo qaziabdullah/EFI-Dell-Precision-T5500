@@ -1,6 +1,6 @@
 # Dell Precision T5500 Hackintosh
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.8.8-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.3-green.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/)
 [![GitHub issues](https://img.shields.io/github/issues/qaziabdullah/EFI-Dell-Precision-T5500.svg)](https://github.com/qaziabdullah/EFI-Dell-Precision-T5500/issues/)
 
 ### This repo contains all the fixes for Dell T5500 with Rx570 and Dual Xeon X5675 on macOS Monterey.
@@ -13,17 +13,17 @@ Tested on:
 
 Model | Precision T5500
 ------------- | ---------------
-CPU | Intel Xeon 5675 x2
+CPU | Intel Xeon X5675 x2
 GPU | AMD Radeon RX 570 4GB (Sapphire) 
 RAM | 32GB DDR3 1600Mhz
-Storage | Samsung EVO 870 1TB
+Storage | Samsung 870 EVO 1TB
 Ethernet | Broadcom 5761 Gigabit Ethernet (GbE) PCI-Express 
-Software | macOS 12.6 Monterey, Ventura & Bigsur
+Software | macOS 12.6 Monterey, Ventura & Big Sur
 BIOS | A16
 Serial Port | Disabled
-Hyperthreading | Disabled (If you are on 1x Xeon, enable HT. If you are on 2x Xeon, disable it otherwise it won't even boot)
+Hyperthreading | Disabled (Enable on single CPU, disable on dual CPU config, more [here](#hyperthreading))
 SATA Operation | AHCI
-Bluetooth | Orico BCM20702 - CSR8510 didn't work
+Bluetooth | Orico BCM20702 USB dongle
 
 ## What works?
 
@@ -76,7 +76,7 @@ Test Bluetooth on Ventura.
 
 ## Hyperthreading
 
-A weird thing, Idk why. If Hyperthreading is enabled with 2x Xeon on T5500, it won't boot. Won't even panic. Tried multiple fixes, some of them are listed below. This issue seems to be High Seirra and up. I haven't tested HS but test and let me know. Tested on Bigsur, Monterey & Ventura but never worked.
+A weird thing, Idk why. If Hyperthreading is enabled with 2x Xeon on T5500, it won't boot. Won't even panic. Tried multiple fixes, some of them are listed below. This issue seems to be High Sierra and up. I haven't tested HS but test and let me know. Tested on Bigsur, Monterey & Ventura but never worked.
 
 - CpuTscsync
 - VoodoTscsync
@@ -92,39 +92,13 @@ A lot of other things too but don't remember.
 
 ## Emulated NVRAM
 
-If you don't have native NVRAM, don't fret. We can set up emulated NVRAM by using a script to save the NVRAM contents to a plist during the shutdown process, which will then be loaded by OpenCore at the next startup.
+To enable emulated NVRAM support:
 
-To enable emulated NVRAM, you'll need the following set:
+Grab the LogoutHook folder from the `Utilties` folder inside the [OpenCore release](https://github.com/acidanthera/OpenCorePkg/releases) package and place it in your user folder
 
-Within your config.plist:
+Open up terminal and run the following command:
 
-- Booter -> Quirks:
-DisableVariableWrite: set to NO
-Misc -> Security:
-ExposeSensitiveData: set to at least 0x1
-- NVRAM:
-LegacyOverwrite set to YES
-LegacySchema: NVRAM variables set (OpenCore compares these to the variables present in nvram.plist)
-WriteFlash: set to YES
-
-And within your EFI:
-
-OpenVariableRuntimeDxe.efi driver
-OpenRuntime.efi driver (this is needed for proper sleep, shutdown and other services to work correctly)
-Make sure to snapshot after to make sure the drivers are listed in your config.plist. Afterwards, make sure that both OpenVariableRuntimeDxe.efi and OpenRuntime.efi have LoadEarly set to YES, and that OpenVariableRuntimeDxe.efi is placed before OpenRuntime.efi in your config .
-
-Now grab the LogoutHook folder (opens new window)(inside Utilities) and place it somewhere safe (e.g. within your user directory, as shown below):
-
-/Users/$(whoami)/LogoutHook/
-
-Open up terminal and run the following (one at a time):
-
-cd /Users/$(whoami)/LogoutHook/
-./Launchd.command install 
-
-
-Copied from OpenCore. Tested, working.
-
+`cd /Users/$(whoami)/LogoutHook/ && ./Launchd.command install`
 
 ## How to Install macOS Monterey
 
