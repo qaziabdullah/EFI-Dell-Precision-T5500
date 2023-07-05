@@ -38,35 +38,21 @@ Almost everything except hyperthreading.
 
 Copy the EFI folder to your EFI partition. That's it.
 
-## Kepler Card (UPGRADED TO RX570)
+## GPU specific settings
 
-To get Kepler working on Monterey, you have to use shikigva=40 and agdpmod=9696. (THIS FIX IS MONTEREY ONLY)
-Those are added in the config.plist.
-Otherwise, expect a black display on boot. 
-Use OCLP for acceleration as Monterey removed support for Kepler cards.
-Ignore this entire section if you have AMD OOTB supported card.
+AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll need to add their appropriate boot-args:
 
-Here is [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/)
-###### INCASE YOU DON'T HAVE KEPLER CARD AND HAVE AN AMD ONE, REMOVE THOSE BOOT-ARGS
+| GPU type | boot-args |
+|--------|---------|
+| NVIDIA Kepler (GTX 600/700 series) (Catalina/Big Sur) | `shikigva=40 agdpmod=vit9696` |
+| AMD Navi (RX 5000/6000 series) | `agdpmod=pikera`
 
-## Ventura
+## Note for Ventura users (also Monterey with Kepler GPUs)
 
-RX570 is supported on Ventura after patching with OCLP. Use 03080000 sip to boot Ventura and use OCLP.
-Didn't test much.
-USB is broken completely, OCLP will fix that too.
-
-## Sonoma Beta
-
-RX570 is supported on Sonoma after patching with OCLP.
-Works fine after OLCP. Bluetooth might have issues. Will update once I fix it or have any update.
-USB is broken completely, OCLP will fix that too.
-
-## Note For Ventura & Sonoma
-
-Install with sip disabled. 
-It won't boot. Boot to Ventura or Sonoma's recovery and open terminal.
-Type csrutil disbale. Hit enter. 
-Reboot to the OS with sip disabled or sip configured to OCLP's requirements.
+1. Set `SecureBootModel` to from `Default` to `Disabled`
+2. Add `ipc_control_port_options=0 revpatch=sbvmm` and (Ventura with Kepler only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
+3. Change value of `csr-active-config` to `03080000`
+4. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
 
 ## RTC
 
@@ -102,7 +88,6 @@ A weird thing, Idk why. If Hyperthreading is enabled with 2x Xeon on T5500, it w
 
 A lot of other things too but don't remember.
 
-
 ## Emulated NVRAM
 
 If you don't have native NVRAM, don't fret. We can set up emulated NVRAM by using a script to save the NVRAM contents to a plist during the shutdown process, which will then be loaded by OpenCore at the next startup.
@@ -126,7 +111,7 @@ OpenVariableRuntimeDxe.efi driver
 OpenRuntime.efi driver (this is needed for proper sleep, shutdown and other services to work correctly)
 Make sure to snapshot after to make sure the drivers are listed in your config.plist. Afterwards, make sure that both OpenVariableRuntimeDxe.efi and OpenRuntime.efi have LoadEarly set to YES, and that OpenVariableRuntimeDxe.efi is placed before OpenRuntime.efi in your config .
 
-Now grab the LogoutHook folder (opens new window)(inside Utilities) and place it somewhere safe (e.g. within your user directory, as shown below):
+Now grab the LogoutHook folder from the OpenCore release package (inside Utilities) and place it somewhere safe (e.g. within your user directory, as shown below):
 
 /Users/$(whoami)/LogoutHook/
 
@@ -162,9 +147,6 @@ There are two ways you can install Ventura:
 After you have created a bootable Installer, copy the EFI folder to the EFI partition and install as usual. After the installation, mount the EFI partition of the installed OS and copy the EFI folder to its partition. 
 
 
-### NVIDIA OPTIONAL (MONTEREY)
-When you boot on a kepler card, you will notice no acceleration will be there. 
-Complete setup, copy efi, and use OCLP.
 
 ### POST INSTALL
 
