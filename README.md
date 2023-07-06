@@ -31,8 +31,9 @@ Almost everything except hyperthreading.
 
 ## What doesn’t work?
 
-1. CPUPM, I haven't added it. You can add it using ssdtprgen. Works.
-3. Shutdown works, reboot doesn’t. Which might get solved. 
+- CPUPM, I haven't added it. You can add it using ssdtprgen. Works.
+- Shutdown works, reboot doesn’t. Which might get solved.
+- Hyperthreading on dual CPU config
 
 ## How To Use
 
@@ -59,19 +60,11 @@ AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll nee
 This will cause BIOS to reset after every shutdown. B*tch took long to get fixed. With Bios A16, the RTC fixes are added in config.plist.
 However, with a different version of BIOS, the sectors might differ. Either Upgrade/Downgrade to A16 or find bad sectors if bios resets.
 
-
 ## CpusTSCSync
 
 It’s just required for sleep atm. Everything else isn’t affected because of this.
 Wait for a newer version, possibly 1.10.0 as current version won’t let you boot.
 Sleep is kinda working fine for me. See if you have issues and let me know.
-
-## Bluetooth
-
-The default SMBIOS is iMacPro1,1.
-Everything works so no need to change this ig.
-Test Bluetooth on Ventura.
-
 
 ## Hyperthreading
 
