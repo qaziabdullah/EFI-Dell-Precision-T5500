@@ -50,10 +50,11 @@ AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll nee
 
 ## Note for Ventura users (also Monterey with Kepler GPUs)
 
-1. Set `SecureBootModel` to from `Default` to `Disabled`
-2. Add `ipc_control_port_options=0 revpatch=sbvmm` and (Ventura only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
-3. Change value of `csr-active-config` to `03080000`
-4. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
+1. Use a USB hub for attaching the keyboard and mouse on initial install, as Ventura dropped support for the USB 1.1 controller
+2. Set `SecureBootModel` to from `Default` to `Disabled`
+3. Add `ipc_control_port_options=0 revpatch=sbvmm` and (Ventura only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
+4. Change value of `csr-active-config` to `03080000`
+5. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
 
 ## RTC
 
